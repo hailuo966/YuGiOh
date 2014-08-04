@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_mainDeck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="主卡组"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_mainDeck_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_mainDeck"
+                android:padding="3dp"
+                android:text="0"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_mainDeck_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_mainDeck_count"
+                android:background="@drawable/selector_click_bg"
+                android:padding="3dp"
+                android:text="清空"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_deck_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_click_bg"
+                android:padding="3dp"
+                android:text="编辑"
+                android:textSize="20dp" />
+
+            <GridView
+                android:id="@+id/gv_mainDeck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mainDeck"
+                android:numColumns="10" >
+            </GridView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_subDeck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="副卡组"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_subDeck_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_subDeck"
+                android:padding="3dp"
+                android:text="0"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_subDeck_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_subDeck_count"
+                android:background="@drawable/selector_click_bg"
+                android:padding="3dp"
+                android:text="清空"
+                android:textSize="20dp" />
+
+            <GridView
+                android:id="@+id/gv_subDeck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_subDeck"
+                android:numColumns="10" >
+            </GridView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_extraDeck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="额外卡组"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_extraDeck_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_extraDeck"
+                android:padding="3dp"
+                android:text="0"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_extraDeck_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_extraDeck_count"
+                android:background="@drawable/selector_click_bg"
+                android:padding="3dp"
+                android:text="清空"
+                android:textSize="20dp" />
+
+            <GridView
+                android:id="@+id/gv_extraDeck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_extraDeck"
+                android:numColumns="10" >
+            </GridView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_deck_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="flagNoExtractUi" >
+        </EditText>
+
+        <ListView
+            android:id="@+id/lv_deck_cards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

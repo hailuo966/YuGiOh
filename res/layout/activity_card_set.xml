@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/set_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@null" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_set_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_click_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="创建卡组"
+        android:textColor="@android:color/background_light"
+        android:textSize="25dp" />
+
+</LinearLayout>

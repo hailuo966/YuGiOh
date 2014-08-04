@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_startSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_click_bg"
+        android:padding="5dp"
+        android:text="详细查询"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
+
+    <LinearLayout
+        android:id="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卡片名称"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@android:color/background_dark"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_name"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卡片归属"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/et_camp"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/selector_click_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="不限"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_camp"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="罕见程度"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/et_rare"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/selector_click_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="不限"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_rare"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卡片限制"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/et_ban"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/selector_click_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="不限"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_ban"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卡片类型"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.5" >
+
+                <EditText
+                    android:id="@+id/et_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/selector_click_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="不限"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_type"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.5" >
+
+                <EditText
+                    android:id="@+id/et_type2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/selector_click_bg"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="不限"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_type2"
+                    android:background="@color/color_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_monster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="卡片星数"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3" >
+
+                    <EditText
+                        android:id="@+id/et_starNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@android:color/background_dark"
+                        android:inputType="number"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_starNum"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="卡片属性"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3" >
+
+                    <EditText
+                        android:id="@+id/et_attribute"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@android:color/background_dark"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="不限"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_attribute"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="卡片种族"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3" >
+
+                    <EditText
+                        android:id="@+id/et_race"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@drawable/selector_click_bg"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="不限"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_race"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="攻击力"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3" >
+
+                    <EditText
+                        android:id="@+id/et_atk"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@android:color/background_dark"
+                        android:inputType="number"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_atk"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="守备力"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="3" >
+
+                    <EditText
+                        android:id="@+id/et_def"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@android:color/background_dark"
+                        android:inputType="number"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_def"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_click_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="搜索"
+                android:textColor="@android:color/background_light"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_click_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="重置"
+                android:textColor="@android:color/background_light"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_banList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_click_bg"
+        android:padding="5dp"
+        android:text="禁限卡表"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
+
+    <TextView
+        android:id="@+id/tv_cardSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_click_bg"
+        android:padding="5dp"
+        android:text="卡组"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray" />
+
+</LinearLayout>

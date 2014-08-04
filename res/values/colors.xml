@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_blue">#1874CD</color>
+    <color name="color_gray">#4F4F4F</color>
+
+    <drawable name="color_ban_tab_bg">#8B8386</drawable>
+
+</resources>

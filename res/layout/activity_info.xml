@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark" >
+
+    <TextView
+        android:id="@+id/card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="中文名：\n日文名：\n英文名：\n"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/card_attribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_name"
+        android:layout_marginLeft="5dp"
+        android:text="卡片归属：\n卡片密码：\n卡片种类：\n卡片限制：\n罕见程度："
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_attribute"
+        android:layout_marginLeft="5dp"
+        android:text="星数：\n种族：\n属性：\n攻：\t守："
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/card_depict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_info"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="效果："
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp" />
+
+</RelativeLayout>
