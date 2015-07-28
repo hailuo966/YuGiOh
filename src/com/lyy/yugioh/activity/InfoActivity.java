@@ -70,7 +70,7 @@ public class InfoActivity extends Activity implements IActivity
 						+ U.selectCard.getCardDef();
 			}
 			String depict = "效果：" + U.selectCard.getSCCardDepict();
-			String path = U.IMAGE_PATH + (U.selectCard.get_id() - 1) + ".jpg";
+			String path = U.imagePath + (U.selectCard.getCardID()) + ".jpg";
 			Bitmap bitmap = BitmapFactory.decodeFile(path);
 			mtv_name.setText(name);
 			mtv_attribute.setText(attribute);

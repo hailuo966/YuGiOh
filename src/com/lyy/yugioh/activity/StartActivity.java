@@ -21,42 +21,36 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.view.Menu;
 
-public class StartActivity extends Activity implements Callback
-{
+public class StartActivity extends Activity implements Callback {
 	private Handler handler;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
 		OrmliteDbHelper.copyDataBase(this, 0);
 		OrmliteDbHelper.initHelper(this);
+		U.init(this);
 		handler = new Handler(this);
 
-		new Thread(new Runnable()
-		{
+		new Thread(new Runnable() {
 
 			@Override
-			public void run()
-			{
-				try
-				{
+			public void run() {
+				try {
 					Dao<CardEntity, Integer> dao = OrmliteDbHelper.getDao(StartActivity.this, CardEntity.class);
 					dao.setAutoCommit(OrmliteDbHelper.getConnection(), false);
 					Savepoint savepoint = OrmliteDbHelper.getConnection().setSavePoint("getData");
 					QueryBuilder<CardEntity, Integer> builder = dao.queryBuilder();
 					U.results = (ArrayList<CardEntity>) builder.orderBy("SCCardName", true).query();
 					OrmliteDbHelper.getConnection().commit(savepoint);
-					if (U.results.size() > 0)
-					{
+					if (U.results.size() > 0) {
 						U.upperResult = new ArrayList<CardEntity>();
 						U.arrBan0 = new ArrayList<CardEntity>();
 						U.arrBan1 = new ArrayList<CardEntity>();
 						U.arrBan2 = new ArrayList<CardEntity>();
 						U.arrBan00 = new ArrayList<CardEntity>();
-						for (CardEntity cardEntity : U.results)
-						{
+						for (CardEntity cardEntity : U.results) {
 							CardEntity entity = new CardEntity();
 							entity.setSCCardAttribute(cardEntity.getSCCardAttribute().toLowerCase());
 							entity.setSCCardBan(cardEntity.getSCCardBan().toLowerCase());
@@ -83,8 +77,7 @@ public class StartActivity extends Activity implements Callback
 						if (U.results.size() == U.upperResult.size())
 							handler.sendEmptyMessage(0);
 					}
-				} catch (SQLException e)
-				{
+				} catch (SQLException e) {
 					e.printStackTrace();
 				}
 			}
@@ -92,8 +85,7 @@ public class StartActivity extends Activity implements Callback
 	}
 
 	@Override
-	public boolean handleMessage(Message msg)
-	{
+	public boolean handleMessage(Message msg) {
 		Intent intent = new Intent();
 		intent.setClass(this, MainActivity.class);
 		startActivity(intent);

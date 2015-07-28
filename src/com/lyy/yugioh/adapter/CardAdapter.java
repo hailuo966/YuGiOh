@@ -79,7 +79,8 @@ public class CardAdapter extends BaseAdapter
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		String path = U.IMAGE_PATH + (cards.get(position).get_id() - 1) + ".jpg";
+		String path = U.imagePath + (cards.get(position).getCardID()) + ".jpg";
+		System.out.println(path);
 		Bitmap bitmap = U.imageBuffer.get(path);
 		if (bitmap == null)
 		{
